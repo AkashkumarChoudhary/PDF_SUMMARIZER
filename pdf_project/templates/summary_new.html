@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block  title %}
+PDF Summary        
+{% endblock  %}
+
+{% block content %}
+    <h1>Summary for {{ pdf_upload.file.name }}</h1>
+    <h2>Extracted Text</h2>
+    <p>{{ pdf_upload.extracted_text }}</p>
+    <h2>Summary</h2>
+    <form method="post">
+        {% csrf_token %}
+        {% comment %} <button type="submit">Summarize</button> {% endcomment %}
+        <button type="summit" class="btn btn-primary">Summarize</button>
+    </form>
+
+    <div class = "mt-1">
+    {% if summary %}
+        <h3 >Generated Summary</h3>
+        {{ summary| safe }}
+    {% endif %}
+    <a href="{% url 'upload_pdf' %}">Upload another PDF</a>
+    </div>
+{% endblock content %}
