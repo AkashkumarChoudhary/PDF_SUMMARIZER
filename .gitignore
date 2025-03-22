@@ -28,3 +28,6 @@ build/
 
 # Ignore uploads folder
 uploads/
+
+# Ignore virtual environment directory
+.venv/

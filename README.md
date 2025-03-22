@@ -32,7 +32,7 @@ PDF Summarizer is a Django-based web application that allows users to upload PDF
 - Markdown for formatting AI responses
 
 ## System Design Diagram
-![System Design Diagram](<../System Design.png>)
+![System Design Diagram](<./System Design.png>)
 
 
 ## Features and Functionality
