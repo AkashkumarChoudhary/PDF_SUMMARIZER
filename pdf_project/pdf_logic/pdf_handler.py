@@ -33,7 +33,7 @@ def generate_summary_prompt(extracted_text):
 
 def summarize_text(text, api_key):
     """Summarize the extracted text using the Gemini API with a custom prompt."""
-    client = genai.Client(api_key='AIzaSyDujSmWVDsznzx79jTVrwfy0QVMvcfcMnk')
+    client = genai.Client(api_key='<gemini api>')
        
     # Generate the prompt using the extracted text
     prompt = generate_summary_prompt(text)
